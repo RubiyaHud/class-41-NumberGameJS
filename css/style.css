@@ -1,0 +1,127 @@
+/* All Common CSS Start */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+a,a:hover{
+    text-decoration: none;
+    display: inline-block;
+}
+ul,ol{
+    list-style-type:none;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+    line-height: 0.8;
+}
+/* All Common CSS End */
+
+.container{
+    width: 1320px;
+    margin: 0 auto;
+}
+#homePage{
+    padding: 150px 0;
+    background: #dbdbdb;
+}
+.gameArea{
+    width: 1000px;
+    background: #ffff;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+}
+.gameArea h1{
+    font-size: 48px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.nameInput{
+    width: 600px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 80px;
+}
+.nameInput::placeholder{
+    font-size: 20px;
+    color: #dddd;
+}
+.playBtn{
+    display: block;
+    color: #fff;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    background: #7041D3;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.nameError{
+    display: none;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    color: #ffff;
+    font-size: 20px;
+    font-weight: 700;
+    background: rgb(235, 41, 41);
+    border-radius: 10px;    
+}
+/* ======================= Player One Start ========================= */
+.playerOnegameArea{
+    display: none;
+    width: 1000px;
+    background: #ffff;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+}
+.playerOnegameArea h1{
+    font-size: 48px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.playerOneInput{
+    width: 600px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 80px;
+}
+.playerOneInput::placeholder{
+    font-size: 20px;
+    color: #dddd;
+}
+.playerPlayBtn{
+    display: block;
+    color: #fff;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    background: #7041D3;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.playerOneError{
+    display: none;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    color: #ffff;
+    font-size: 20px;
+    font-weight: 700;
+    background: rgb(235, 41, 41);
+    border-radius: 10px;    
+}
+/* ======================= Player One End ========================= */
