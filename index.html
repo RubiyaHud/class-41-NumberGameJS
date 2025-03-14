@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number Guessing Game</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <section id="homePage">
         <div class="container">
@@ -20,15 +22,37 @@
             <!-- ======================= Player One Start ========================= -->
             <div class="playerOnegameArea">
                 <h1 class="playerOneHeading">Player - 01</h1>
-                <input type="text" placeholder="Give a Number" class="playerOneInput">
+                <input type="text" placeholder="Give a Number (Range between 1 to 10)" class="playerOneInput">
                 <button class="playerPlayBtn"> Let's Play </button>
                 <div class="playerOneError">
                     <h3> Number is Missing </h3>
                 </div>
             </div>
             <!-- ======================= Player One End ========================= -->
+            <!-- ======================= Player Two Start ========================= -->
+            <div class="playerTwoGameArea">
+                <h1>Player - 2</h1>
+                <input type="text" placeholder="What is Your Name?" class="playerTwoNameInput">
+                <button class="playerTwoPlayBtn"> Start Game </button>
+                <div class="playerTwoNameError">
+                    <h3> Name is Missing </h3>
+                </div>
+            </div>
+            <!-- ======================= Player Two End ========================= -->
+            <!-- ======================= Player Two Chance-1 Start ========================= -->
+            <div class="playerTwoChanceOne">
+                <h1 class="playerTwoHeading">Player - 02</h1>
+                <h4 class="playerTwoChanceNum">Chance - 1</h4>
+                <input type="text" placeholder="Guess a Number" class="playerTwoChanceOneInput">
+                <button class="playerTwoChanceOnePlayBtn"> Guess </button>
+                <div class="playerTwoChanceOneError">
+                    <h3> Number is Missing </h3>
+                </div>
+            </div>
+            <!-- ======================= Player Two Chance-1 End ========================= -->
         </div>
     </section>
     <script src="js/script.js"></script>
 </body>
+
 </html>
