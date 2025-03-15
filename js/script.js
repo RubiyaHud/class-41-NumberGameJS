@@ -26,7 +26,16 @@ let playerTwoChanceInput = document.querySelector(".playerTwoChanceInput");
 let playerTwoChancePlayBtn = document.querySelector(".playerTwoChancePlayBtn");
 let playerTwoChanceError = document.querySelector(".playerTwoChanceError");
 let counter = 1;
+let totalChance = 3;
 // ============================================================
+// ======================= Game Over =========================
+let gameOver = document.querySelector(".gameOver");
+let gameOverHeading = document.querySelector(".gameOverHeading");
+let winnerName = document.querySelector(".winnerName");
+let matchedOrUnmatched = document.querySelector(".matchedOrUnmatched");
+let winnerEmoji = document.querySelector(".winnerEmoji");
+let failedEmoji = document.querySelector(".failedEmoji");
+// ==================================================================
 
 playBtn.addEventListener("click", function () {
     if (nameInput.value == "") {
@@ -80,8 +89,7 @@ playerTwoPlayBtn.addEventListener("click", function () {
 playerTwoChancePlayBtn.addEventListener("click", function () {
     let playerOneNumber = playerOneInput.value;
     let playerTwoNumber = playerTwoChanceInput.value;
-    
-    
+
     if (playerTwoChanceInput.value == "") {
         playerTwoChanceError.style.display = "block";
         playerTwoChanceError.innerHTML = "Number is Missing";
@@ -91,22 +99,35 @@ playerTwoChancePlayBtn.addEventListener("click", function () {
         playerTwoChanceError.style.display = "block";
         playerTwoChanceError.innerHTML = "Invalid input";
     }
-    else {       
-        if (playerOneNumber === playerTwoNumber && counter <= 3) {
+    else {
+        if (playerOneNumber === playerTwoNumber && counter <= totalChance) {
             console.log("Matched");
             playerTwoChance.style.display = "none";
+            gameOver.style.display = "block";
+            let winnerNam = "Winner is " + 'Player - 2 ("' + playerTwoNameInput.value + '")';
+            winnerName.innerHTML = winnerNam;
+            matchedOrUnmatched.innerHTML = "Number Matched!";
+            winnerEmoji.style.display = "block";
+            failedEmoji.style.display = "none";
         }
-        else if (playerOneNumber != playerTwoNumber && counter <= 3) {
+        else if (playerOneNumber != playerTwoNumber && counter <= totalChance) {
             console.log(counter);
-            counter++;   
-            if(counter <= 3){
+            let chanceLeft = totalChance - counter;
+            counter++;
+            if (counter <= totalChance) {
                 playerTwoChanceNum.innerHTML = "Chance - " + counter;
-            }         
+                playerTwoChanceError.style.display = "block";                
+                playerTwoChanceError.innerHTML = "Wrong Guess! You have only " + chanceLeft + " chance left";
+            }
         }
-        if(counter > 3){
-            console.log("Game Over");
+        if (counter > totalChance) {
+            console.log("Not Matched");
             playerTwoChance.style.display = "none";
-        }        
+            gameOver.style.display = "block";
+            matchedOrUnmatched.innerHTML = "Number Does not Match!";
+            winnerEmoji.style.display = "none";
+            failedEmoji.style.display = "block";
+        }
     }
 });
 // ============================================================
