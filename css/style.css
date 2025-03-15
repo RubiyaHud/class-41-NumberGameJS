@@ -133,7 +133,10 @@ h1,h2,h3,h4,h5,h6,p{
 /* ======================= Player Two End ======================= */
 
 /* ======================= Player Two Chance Start ======================= */
+.playerTwoChanceOne{
+    display: none;
+}
 .playerTwoChanceNum{
     margin-bottom: 5px;
-
 }
+/* ======================= Player Two Chance End ======================= */
