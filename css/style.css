@@ -26,7 +26,7 @@ h1,h2,h3,h4,h5,h6,p{
     padding: 150px 0;
     background: #dbdbdb;
 }
-.gameArea, .playerTwoGameArea, .playerTwoChanceOne{
+.gameArea, .playerTwoGameArea, .playerTwoChance{
     width: 1000px;
     background: #ffff;
     border-radius: 10px;
@@ -35,22 +35,22 @@ h1,h2,h3,h4,h5,h6,p{
     padding-bottom: 200px;
     text-align: center;
 }
-.gameArea h1, .playerTwoGameArea h1, .playerTwoChanceOne h1{
+.gameArea h1, .playerTwoGameArea h1, .playerTwoChance h1{
     font-size: 48px;
     font-weight: 700;
     padding-bottom: 20px;
 }
-.nameInput, .playerTwoNameInput, .playerTwoChanceOneInput{
+.nameInput, .playerTwoNameInput, .playerTwoChanceInput{
     width: 600px;
     padding: 25px;
     margin-bottom: 20px;
     border-radius: 80px;
 }
-.nameInput::placeholder, .playerTwoNameInput::placeholder, .playerTwoChanceOneInput::placeholder{
+.nameInput::placeholder, .playerTwoNameInput::placeholder, .playerTwoChanceInput::placeholder{
     font-size: 20px;
     color: #dddd;
 }
-.playBtn, .playerTwoPlayBtn, .playerTwoChanceOnePlayBtn{
+.playBtn, .playerTwoPlayBtn, .playerTwoChancePlayBtn{
     display: block;
     color: #fff;
     width: 200px;
@@ -63,7 +63,7 @@ h1,h2,h3,h4,h5,h6,p{
     font-size: 20px;
     font-weight: 700;
 }
-.nameError, .playerTwoNameError, .playerTwoChanceOneError{
+.nameError, .playerTwoNameError, .playerTwoChanceError{
     display: none;
     width: 70%;
     margin: 0 auto;
@@ -133,7 +133,7 @@ h1,h2,h3,h4,h5,h6,p{
 /* ======================= Player Two End ======================= */
 
 /* ======================= Player Two Chance Start ======================= */
-.playerTwoChanceOne{
+.playerTwoChance{
     display: none;
 }
 .playerTwoChanceNum{

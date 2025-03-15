@@ -19,12 +19,12 @@ let playerTwoPlayBtn = document.querySelector(".playerTwoPlayBtn");
 let playerTwoNameError = document.querySelector(".playerTwoNameError");
 // ============================================================
 // ======================= Player Two Chance =========================
-let playerTwoChanceOne = document.querySelector(".playerTwoChanceOne");
+let playerTwoChance = document.querySelector(".playerTwoChance");
 let playerTwoHeading = document.querySelector(".playerTwoHeading");
 let playerTwoChanceNum = document.querySelector(".playerTwoChanceNum");
-let playerTwoChanceOneInput = document.querySelector(".playerTwoChanceOneInput");
-let playerTwoChanceOnePlayBtn = document.querySelector(".playerTwoChanceOnePlayBtn");
-let playerTwoChanceOneError = document.querySelector(".playerTwoChanceOneError");
+let playerTwoChanceInput = document.querySelector(".playerTwoChanceInput");
+let playerTwoChancePlayBtn = document.querySelector(".playerTwoChancePlayBtn");
+let playerTwoChanceError = document.querySelector(".playerTwoChanceError");
 let counter = 1;
 // ============================================================
 
@@ -70,31 +70,31 @@ playerTwoPlayBtn.addEventListener("click", function () {
     }
     else {
         playerTwoGameArea.style.display = "none";
-        playerTwoChanceOne.style.display = "block";
+        playerTwoChance.style.display = "block";
         let playerTwoName = playerTwoHeading.innerHTML + ' ( ' + playerTwoNameInput.value + ' ) ';
         playerTwoHeading.innerHTML = playerTwoName;
     }
 });
 // ============================================================
 // ======================= Player Two Chance =========================
-playerTwoChanceOnePlayBtn.addEventListener("click", function () {
+playerTwoChancePlayBtn.addEventListener("click", function () {
     let playerOneNumber = playerOneInput.value;
-    let playerTwoNumber = playerTwoChanceOneInput.value;
+    let playerTwoNumber = playerTwoChanceInput.value;
     
     
-    if (playerTwoChanceOneInput.value == "") {
-        playerTwoChanceOneError.style.display = "block";
-        playerTwoChanceOneError.innerHTML = "Number is Missing";
+    if (playerTwoChanceInput.value == "") {
+        playerTwoChanceError.style.display = "block";
+        playerTwoChanceError.innerHTML = "Number is Missing";
     }
-    else if (!(playerTwoChanceOneInput.value - 15)) {
+    else if (!(playerTwoChanceInput.value - 15)) {
         console.log("Not a number");
-        playerTwoChanceOneError.style.display = "block";
-        playerTwoChanceOneError.innerHTML = "Invalid input";
+        playerTwoChanceError.style.display = "block";
+        playerTwoChanceError.innerHTML = "Invalid input";
     }
     else {       
         if (playerOneNumber === playerTwoNumber && counter <= 3) {
             console.log("Matched");
-            playerTwoChanceOne.style.display = "none";
+            playerTwoChance.style.display = "none";
         }
         else if (playerOneNumber != playerTwoNumber && counter <= 3) {
             console.log(counter);
@@ -105,7 +105,7 @@ playerTwoChanceOnePlayBtn.addEventListener("click", function () {
         }
         if(counter > 3){
             console.log("Game Over");
-            playerTwoChanceOne.style.display = "none";
+            playerTwoChance.style.display = "none";
         }        
     }
 });
